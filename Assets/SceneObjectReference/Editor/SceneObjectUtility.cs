@@ -169,7 +169,9 @@ namespace terasurware
 						BindingFlags.Instance | 
 						BindingFlags.Public | 
 						BindingFlags.FlattenHierarchy);
-				
+				if(fi == null){
+					continue;
+				}
 				var del = (System.Delegate)fi.GetValue (obj);
 				
 				
